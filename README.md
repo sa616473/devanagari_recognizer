@@ -35,12 +35,14 @@ Objective: To accuratley classify the Devanagari Characters
 ## Discovering the Data
 
 #### Data Visualization
--- **Images before pre-processing** --
+#### --**Images before pre-processing** --
 ![Image before preprocessing](/reports/figures/char_plots.png)
 
--- **Images after pre-processing** --
-##### We can see that the images are more cear after pre processing
+
+#### -- **Images after pre-processing** --
 ![Image after preprocessing](/reports/figures/char_plots_binary.png)
+
+##### We can see that the images are more clear after pre processing
 
 ### Developing Solutions
 
@@ -50,7 +52,10 @@ Objective: To accuratley classify the Devanagari Characters
 
 - We used a simple model at first to see how the model will perform this a simple DNN with one hidden layer.
 - Results 
-|loss |accuracy |layer|
+
+
+|#|loss |accuracy |layer|
+|--|-----|---------|-----|
  |0 |3.012618 |0.853333 |1024.0|
  |1 |3.008728 |0.857029 |512.0|
  |2 |3.196688 |0.668768 |128.0|
@@ -70,7 +75,8 @@ Objective: To accuratley classify the Devanagari Characters
  - This is a CNN with 5 hidden layers.
  - Result
  
- |loss |accuracy |layer|
+| # |loss |accuracy |layer|
+|--|-----|---------|------|
  |0 |0.089015 |0.974710 |128.0|
  |1 |0.221300 |0.940870 |64.0|
  |2 |1.114612 |0.742971 |32.0|
