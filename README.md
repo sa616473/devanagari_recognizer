@@ -57,13 +57,13 @@ Objective: To accuratley classify the Devanagari Characters
  
  - Grpahs of the loss function and accuracy 
  - Layer with 1024 neurons
- ![0](/reports/performance/DNN 1024 layer.png)
+ ![0](/reports/performance/DNN_1024_layer.png)
  
  - Layer with 512 neurons
- ![1](/reports/performance/DNN 512 layer.png)
+ ![1](/reports/performance/DNN_512_layer.png)
  
  - Layer with 128 neurons
- ![2](/reports/performance/DNN 128 layer.png)
+ ![2](/reports/performance/DNN_128_layer.png)
  
  -- **2. Convolution Neural Netowork(CNN)** --
  - We used a little complicated model after that.
@@ -77,13 +77,13 @@ Objective: To accuratley classify the Devanagari Characters
  
  - Graphs of the loss function and accuracy
  - Layer with 128, 64, 32 filters
-  ![0](/reports/performance/CNN 128 filter.png)
+  ![0](/reports/performance/CNN_128_filter.png)
   
  - Layer with 64, 32, 16 filters
-  ![0](/reports/performance/CNN 64 filter.png)
+  ![0](/reports/performance/CNN_64_filter.png)
 
   - Layer with 32, 16, 8 filters
-  ![0](/reports/performance/CNN 32 filter.png)
+  ![0](/reports/performance/CNN_32_filter.png)
  
  #### OUR BEST MODEL IS CNN WITH 128,64,32 filters.
  
