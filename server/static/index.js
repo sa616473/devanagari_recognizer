@@ -11,9 +11,10 @@
 	context.fillRect(0,0,canvas.width,canvas.height);
 	context.color = "black";
 	context.lineWidth = 10;
-    context.lineJoin = context.lineCap = 'round';
+	context.lineJoin = context.lineCap = 'round';
 	
-	debug();
+
+
 
 	canvas.addEventListener( "mousemove", function( e )
 	{
@@ -80,4 +81,6 @@
 			context.lineWidth = $( this ).val();
 		});
 	}
+	debug();
+
 }());

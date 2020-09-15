@@ -14,6 +14,8 @@ import os
 import base64
 
 # import codecs
+import matplotlib.pyplot as plt
+
 import cv2
 
 sys.path.append(os.path.abspath('./model'))
@@ -23,6 +25,8 @@ sys.path.append(os.path.abspath('./model'))
 #intit flask app
 
 app = Flask(__name__)
+
+
 
 
 def init():
@@ -39,7 +43,9 @@ def init():
 
     return loaded_model
 
+global model
 
+model = init()
 
 def convertImage(imgData1):
     imgstr = re.search(r'base64,(.*)', str(imgData1)).group(1)
@@ -63,11 +69,9 @@ def predict():
     im = im.resize((32,32))
     im.save('resized.png')
 
-    x = cv2.imread('resized.png')
+    x = plt.imread('resized.png')
     x = x / 255.
     x = x[np.newaxis, :, :, :1]
-
-    model = init()
 
     out = model.predict(x)
     print(out)
@@ -78,5 +82,5 @@ def predict():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8008))
-    app.run(debug=True, port=port, host="0.0.0.0")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
