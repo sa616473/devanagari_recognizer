@@ -94,6 +94,9 @@ Objective: To accuratley classify the Devanagari Characters
  #### OUR BEST MODEL IS CNN WITH 128,64,32 filters.
  
  ### Deploying Solution
+ 
+ - We deployed our solution using Flask and Heroku
+ - Here is the link ![https://devanagari-recognizer.herokuapp.com/]
 
  
  
