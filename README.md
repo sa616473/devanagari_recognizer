@@ -28,6 +28,8 @@ Objective: To accuratley classify the Devanagari Characters
        'dha', 'na', 'pa', 'pha', 'ba', 'bha', 'ma', 'yaw', 'ra', 'la',
        'waw', 'motosaw', 'petchiryakha', 'patalosaw', 'ha', 'chhya',
        'tra', 'gya', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' '''
+       
+       
 ![Image of characters](/reports/figures/devanagari_cons.gif)
 
 ![Image of numbers](/reports/figures/index.png)
