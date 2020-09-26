@@ -1,6 +1,19 @@
 # Devanagari Recognizer
 Objective: To accuratley classify the Devanagari Characters
 
+## Table of contents
+- Define Problem
+    - Can we accuratley classify the Devanagari Characters?
+- Discover Data
+    - Data Visualization
+- Develop solutions
+    - Machine Learning Models
+    - Hyperparameter tuning
+- Deploy solution
+    - Flask and Heroku
+    
+
+
 Project Organization
 ------------
 
@@ -10,21 +23,41 @@ Project Organization
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
+    │   └── performances    <- Generated performances and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be
+    |
+    ├── server                <- Source code for the webapp
+    │   │
+    │   ├── model           <- Contains the best model we are using for prediction
+    │   │   └── class_labels.csv <- Class labels
+    |   |   └── model_128.h5 
+    |   |   └── model_128.json 
+    |   |   └── model_128_64.h5 
+    |   |   └── model_128_64.json 
+    │   │
+    │   ├── Static        <- Contains the Static index.js and CSS files
+    |   |   └── index.js   
+    |   |   └── style.css 
+    │   ├── templates       <- Static HTML files
+    │   │   └── index.html 
+    │   │
+    |   ├── app.py <- Flask app
+    |   ├── output.png <- Raw Image
+    |   ├── resized.png <- Formatted Image
+    |   ├── Procfile <- Heroku instructions
+    |   ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+    
+    imported
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
@@ -47,18 +80,7 @@ Project Organization
 
 --------
 
-
-## Table of contents
-- Define Problem
-    - Can we accuratley classify the Devanagari Characters?
-- Discover Data
-    - Data Visualization
-- Develop solutions
-    - Machine Learning Models
-    - Hyperparameter tuning
-- Deploy solution
-    - Flask and Heroku
-    
+   
 ## Defining the problem
 
 #### What is Devanagari language?
