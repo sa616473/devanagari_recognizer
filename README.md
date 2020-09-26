@@ -113,10 +113,15 @@ Project Organization
 
 #### Data Visualization
 #### --**Images before pre-processing** --
+
+- As you can see in the images their values are not well scaled and the 
+    values range from 0-255 we need to rescale them.
 ![Image before preprocessing](/reports/figures/char_plots.png)
 
 
 #### -- **Images after pre-processing** --
+- This is how the images look like after rescaling and their 
+    values range in between 0-1.
 ![Image after preprocessing](/reports/figures/char_plots_binary.png)
 
 ##### We can see that the images are more clear after pre processing
@@ -171,7 +176,6 @@ Project Organization
  #### OUR BEST MODEL IS CNN WITH 128,64,32 filters.
  
  ### Deploying Solution
- 
  - We deployed our solution using Flask and Heroku
  - Here is the link ![https://devanagari-recognizer.herokuapp.com/]
 
