@@ -91,15 +91,21 @@ Project Organization
 #### What are we trying to classify
 - we are trying to classify the 46 different characters in the language.
 
- 'ka', 'kha', 'ga', 'gha', 'kna', 'cha', 'chha', 'ja', 'jha', 'yna',
-       'taamatar', 'thaa', 'daa', 'dhaa', 'adna', 'tabala', 'tha', 'da',
-       'dha', 'na', 'pa', 'pha', 'ba', 'bha', 'ma', 'yaw', 'ra', 'la',
-       'waw', 'motosaw', 'petchiryakha', 'patalosaw', 'ha', 'chhya',
-       'tra', 'gya', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' 
-       
-       
+- Characters
+ 'ka', 'kha', 'ga', 'gha', 'kna', 
+ 'cha', 'chha', 'ja', 'jha', 'yna',
+ 'taa', 'thaa', 'da', 'dha', 'na',
+ 'ta', 'tha', 'da','dha', 'na', 
+ 'pa', 'pha', 'ba', 'bha', 'ma', 
+ 'ya', 'ra', 'la','va', 'motosaw', 
+ 'petchiryakha', 'patalosaw', 'ha', 'chhya','tra',
+ 'gya',
 ![Image of characters](/reports/figures/devanagari_cons.gif)
 
+- Digits
+ '0','1', '2', '3', '4', 
+ '5', '6', '7', '8', '9' 
+ 
 ![Image of numbers](/reports/figures/index.png)
 
 ## Discovering the Data
