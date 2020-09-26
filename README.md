@@ -116,6 +116,7 @@ Project Organization
 
 - As you can see in the images their values are not well scaled and the 
     values range from 0-255 we need to rescale them.
+
 ![Image before preprocessing](/reports/figures/char_plots.png)
 
 
