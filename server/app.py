@@ -5,24 +5,17 @@ import pandas as pd
 
 from tensorflow.keras.models import model_from_json
 import  tensorflow as tf
+from tensorflow.keras.preprocessing import image
 
-from PIL import  Image
+from werkzeug.utils import secure_filename
 
-import re
 import sys
 import os
-import base64
 
-# import codecs
-import matplotlib.pyplot as plt
-
-import cv2
 
 sys.path.append(os.path.abspath('./model'))
 
-# from load import *
 
-#intit flask app
 
 app = Flask(__name__)
 
@@ -47,29 +40,28 @@ global model
 
 model = init()
 
-def convertImage(imgData1):
-    imgstr = re.search(r'base64,(.*)', str(imgData1)).group(1)
-    with open('output.png', 'wb') as output:
-        output.write(base64.b64decode(imgstr))
-
+global classes
+classes = pd.read_csv('./model/class_labels.csv')
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/predict/', methods=['GET', 'POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 
-def predict():
-    classes = pd.read_csv('./model/class_labels.csv')
-    imgData = request.get_data()
-    convertImage(imgData)
-        
-    im = Image.open('output.png')
-    im = im.resize((32,32))
-    im.save('resized.png')
+def model_predict():
+    # Get the file from post request
+    f = request.files['file']
 
-    x = plt.imread('resized.png')
+    # Save the file to ./uploads
+    basepath = os.path.dirname(__file__)
+    file_path = os.path.join(basepath, 'uploads', secure_filename(f.filename))
+    f.save(file_path)
+    print(file_path)
+
+    img = image.load_img(file_path, target_size=(32,32))
+    x = image.img_to_array(img)
     x = x / 255.
     x = x[np.newaxis, :, :, :1]
 
@@ -79,8 +71,6 @@ def predict():
     print(response)
     return response
 
-
-
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(port=port)
