@@ -12,6 +12,7 @@ Objective: To accuratley classify the Devanagari Characters
 - Deploy solution
     - Flask and Heroku
     
+ - Web app ![https://devanagari-recognizer.herokuapp.com/]
 
 
 Project Organization

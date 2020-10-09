@@ -25,8 +25,6 @@ def training_visualize(history, title=''):
     loss=history.history['loss']
     val_loss=history.history['val_loss']
 
-#     epochs_range = range(epochs)
-
     plt.figure(figsize=(8, 8))
     plt.subplot(1, 2, 1)
     plt.plot(acc, label='Training Accuracy')
